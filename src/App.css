@@ -1,0 +1,12 @@
+.bg-rosa {
+  background-color: #dcb8b2;
+}
+
+.variant-rosa {
+  font-variant: #dcb8b2;
+}
+
+body {
+  background-color: #dcb8b2;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
