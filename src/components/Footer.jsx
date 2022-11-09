@@ -2,12 +2,12 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Nav from "react-bootstrap/Nav";
-import "../App.css";
+import "../styles/Footer.css";
 import "bootstrap/dist/css/bootstrap.css";
 
 function PieDePagina() {
   return (
-    <Card>
+    <Card bg="rosa">
       <Card.Header>
         <Nav variant="tabs" defaultActiveKey="#first">
           <Nav.Item>

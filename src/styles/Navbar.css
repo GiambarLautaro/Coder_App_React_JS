@@ -1,0 +1,11 @@
+.bg-rosa {
+  background-color: #dcb8b2;
+}
+
+.barranav {
+  display: flex;
+  justify-content: center;
+  font-style: inherit;
+  font-weight: bolder;
+  font-size: large;
+}

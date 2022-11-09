@@ -1,11 +1,11 @@
-import React from "react";
-import Navbar from "react-bootstrap/Navbar";
-import "bootstrap/dist/css/bootstrap.css";
-import "../App.css";
-import logo from "../assets/img/logo.svg";
-import { Nav, NavDropdown } from "react-bootstrap";
-import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
-import Carrito from "./CartWidget";
+import React from 'react';
+import Navbar from 'react-bootstrap/Navbar';
+import 'bootstrap/dist/css/bootstrap.css';
+import logo from '../images/logo.svg';
+import { Nav, NavDropdown } from 'react-bootstrap';
+import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
+import Carrito from './CartWidget';
+import '../styles/Navbar.css';
 
 function BarraNav() {
   return (
@@ -14,22 +14,22 @@ function BarraNav() {
         <img src={logo} />
       </Navbar.Brand>
       <NavbarToggle />
-      <Navbar.Collapse>
+      <Navbar.Collapse className="barranav">
         <Nav>
           <NavDropdown title="Mujeres">
             <NavDropdown.Item href="#">Lencería</NavDropdown.Item>
             <NavDropdown.Item href="#">Ropa Interior Clásica</NavDropdown.Item>
-            <NavDropdown.Item href="#">Otra Cosa</NavDropdown.Item>
+            <NavDropdown.Item href="#">Conjuntos</NavDropdown.Item>
           </NavDropdown>
           <NavDropdown title="Hombres">
-            <NavDropdown.Item href="#">Lencería</NavDropdown.Item>
+            <NavDropdown.Item href="#">Medias</NavDropdown.Item>
             <NavDropdown.Item href="#">Ropa Interior Clásica</NavDropdown.Item>
-            <NavDropdown.Item href="#">Otra Cosa</NavDropdown.Item>
+            <NavDropdown.Item href="#">Otros productos</NavDropdown.Item>
           </NavDropdown>
           <NavDropdown title="Niños">
             <NavDropdown.Item href="#">Ropa Interior</NavDropdown.Item>
-            <NavDropdown.Item href="#">Remeras</NavDropdown.Item>
-            <NavDropdown.Item href="#">Pantalones</NavDropdown.Item>
+            <NavDropdown.Item href="#">Medias</NavDropdown.Item>
+            <NavDropdown.Item href="#">Otros Productos</NavDropdown.Item>
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>
