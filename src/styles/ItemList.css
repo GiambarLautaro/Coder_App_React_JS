@@ -4,7 +4,6 @@
   flex-wrap: wrap;
   padding-top: 15px;
   padding-left: 20px;
-  background-color: #d85671;
-  /* background-color: #e1e1e1; */
   justify-content: space-around;
+  background-image: url('../images/socias-background.jpeg');
 }

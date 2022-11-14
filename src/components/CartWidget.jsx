@@ -7,7 +7,7 @@ import '../styles/CartWidget.css';
 function Carrito() {
   return (
     <>
-      <Button variant="white" size="lg" bg="rosa" active>
+      <Button className="cart" variant="white" size="lg" bg="rosa" active>
         <FaShoppingCart />
       </Button>
     </>

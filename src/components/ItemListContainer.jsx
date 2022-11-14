@@ -23,6 +23,7 @@ export default function ItemListContainer() {
 
   return (
     <>
+      {/* {!productos.lenght && 'loading...'} */}
       <ItemList productos={productos} />
     </>
   );

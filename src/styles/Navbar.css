@@ -1,5 +1,15 @@
+.logo {
+  margin-left: 40px;
+}
 .bg-rosa {
-  background-color: #dcb8b2;
+  background-color: #fcdfd7;
+  border-radius: 0;
+  box-shadow: 10px 5px 8px 5px #777777c2;
+}
+
+.bg-rosa:hover {
+  box-shadow: 10px 5px 8px 5px #202020c2;
+  transition: all 200ms ease;
 }
 
 .barranav {
@@ -8,4 +18,12 @@
   font-style: inherit;
   font-weight: bolder;
   font-size: large;
+}
+
+.subcategorias {
+  color: #d85671;
+}
+
+.subcategorias:hover {
+  color: #ffacb7;
 }

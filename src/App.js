@@ -4,14 +4,23 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PieDePagina from './components/Footer';
 import ItemListContainer from './components/ItemListContainer';
 import BarraNav from './components/Navbar';
+import Checkout from './components/Checkout';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 function App() {
   return (
-    <div className="App">
-      <BarraNav />
-      <ItemListContainer />
-      <PieDePagina />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <BarraNav />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/category/:idcategory" element={<ItemListContainer />} />
+          <Route path="item/:iditem" element={<ItemDetailContainer />} />
+        </Routes>
+        <PieDePagina />
+      </div>
+    </BrowserRouter>
   );
 }
 
