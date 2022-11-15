@@ -6,12 +6,14 @@ import ItemListContainer from './components/ItemListContainer';
 import BarraNav from './components/Navbar';
 import Checkout from './components/Checkout';
 import ItemDetailContainer from './components/ItemDetailContainer';
+// import CarouselDeFotos from './components/Carousel';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <BarraNav />
+        {/* <CarouselDeFotos /> */}
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/checkout" element={<Checkout />} />

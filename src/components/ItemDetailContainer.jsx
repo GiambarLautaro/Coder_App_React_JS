@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import ItemDetail from './ItemDetail';
 import { getProducts } from '../Data/ProductosData';
+import '../styles/ItemDetailContainer.css';
 
 function ItemDetailContainer() {
   const { iditem } = useParams();
@@ -15,7 +16,7 @@ function ItemDetailContainer() {
     });
   }, [iditem]);
   return (
-    <div>
+    <div className="item-detail-container">
       <ItemDetail productos={productos} />
     </div>
   );
