@@ -10,6 +10,7 @@
 .bg-rosa:hover {
   box-shadow: 10px 5px 8px 5px #202020c2;
   transition: all 200ms ease;
+  transform: translateY(-1%);
 }
 
 .barranav {

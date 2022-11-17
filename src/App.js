@@ -6,6 +6,8 @@ import ItemListContainer from './components/ItemListContainer';
 import BarraNav from './components/Navbar';
 import Checkout from './components/Checkout';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import Cart from './components/Cart';
+import ThankUPage from './components/ThankUPage';
 // import CarouselDeFotos from './components/Carousel';
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/category/:idcategory" element={<ItemListContainer />} />
           <Route path="item/:iditem" element={<ItemDetailContainer />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/thankyou" element={<ThankUPage />} />
         </Routes>
         <PieDePagina />
       </div>

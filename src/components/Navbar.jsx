@@ -11,7 +11,9 @@ function BarraNav() {
   return (
     <Navbar variant="light" bg="rosa" sticky="top" expand="lg" collapseOnSelect>
       <Navbar.Brand className="logo">
-        <img src={logo} />
+        <Link to="/">
+          <img src={logo} />
+        </Link>
       </Navbar.Brand>
       <NavbarToggle />
       <Navbar.Collapse className="barranav">
@@ -76,7 +78,9 @@ function BarraNav() {
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>
-      <Carrito />
+      <Link style={{ textDecoration: 'none' }} to="/cart">
+        <Carrito />
+      </Link>
     </Navbar>
   );
 }

@@ -11,8 +11,8 @@ import { IoLogoWhatsapp } from 'react-icons/io';
 
 function PieDePagina() {
   return (
-    <Card className="card">
-      <Card.Header>
+    <Card style={{ backgroundColor: '#ffacb7' }} className="card">
+      <Card.Header style={{ backgroundColor: '#ffacb7' }}>
         <Nav variant="tabs" defaultActiveKey="#first">
           <Nav.Item>
             <Nav.Link href="https://api.whatsapp.com/send?phone=543515216217">
@@ -31,7 +31,7 @@ function PieDePagina() {
           </Nav.Item>
         </Nav>
       </Card.Header>
-      <Card.Body bg="dark">
+      <Card.Body style={{ backgroundColor: '#fcdfd7' }}>
         <Card.Title>Somos Socias, un negocio de Familia</Card.Title>
         <Card.Text>
           Sentite bienvenido/a a Socias, que también es tu lugar
