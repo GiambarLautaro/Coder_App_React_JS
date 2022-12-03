@@ -4,6 +4,7 @@ import '../styles/ItemListContainer.css';
 import ItemList from './ItemList';
 import { getProducts } from '../Data/ProductosData';
 import { useParams } from 'react-router-dom';
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
 
 export default function ItemListContainer() {
   const { idcategory } = useParams();
