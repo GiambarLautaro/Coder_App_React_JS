@@ -7,22 +7,23 @@ import Button from 'react-bootstrap/Button';
 import { AiOutlineEye } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
-export default function Item({ item }) {
+export default function Item({ product }) {
+  console.log(product);
   return (
     <div className="card-container">
       <Card className="card" style={{ width: '18rem' }}>
-        <Card.Img className="card-image" variant="top" src={item.Data_imagen} />
+        <Card.Img className="card-image" variant="top" src={product.img} alt={product.name} />
         <Card.Body>
-          <Card.Title>{item.Data_nombre}</Card.Title>
-          <Card.Text>{item.Data_descripcion}</Card.Text>
+          <Card.Title>{product.name}</Card.Title>
+          <Card.Text>{product.description}</Card.Text>
         </Card.Body>
         <ListGroup className="list-group-flush">
-          <ListGroup.Item className="card-item">{item.Data_color}</ListGroup.Item>
-          <ListGroup.Item className="card-item">{item.Data_talle}</ListGroup.Item>
-          <ListGroup.Item className="card-item">{item.Data_precio}</ListGroup.Item>
+          <ListGroup.Item className="card-item">{product.color}</ListGroup.Item>
+          <ListGroup.Item className="card-item">{product.talle}</ListGroup.Item>
+          <ListGroup.Item className="card-item">{product.price}</ListGroup.Item>
         </ListGroup>
         <Card.Body>
-          <Link to={`/item/${item.Data_id}`}>
+          <Link to={`/item/${product.id}`}>
             <Button variant="danger" className="button">
               {' '}
               Ver más <AiOutlineEye />
@@ -31,6 +32,5 @@ export default function Item({ item }) {
         </Card.Body>
       </Card>
     </div>
-    // return id to detail
   );
 }

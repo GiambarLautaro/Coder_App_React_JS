@@ -15,9 +15,9 @@ import '../styles/ItemList.css';
 export default function ItemList({ products }) {
   return (
     <div className="contenedor-productos">
-      {products.map((e) => {
-        return <Item key={e.Data_id} item={e} />;
-      })}
+      {products.map((product) => (
+        <Item key={product.id} product={product} />
+      ))}
     </div>
   );
 }
