@@ -2,24 +2,32 @@ import 'bootstrap/dist/css/bootstrap.css';
 import React, { useEffect, useState } from 'react';
 import '../styles/ItemListContainer.css';
 import ItemList from './ItemList';
-import { getProducts } from '../Data/ProductosData';
+// import { getProducts } from '../Data/ProductosData';
 import { useParams } from 'react-router-dom';
-import { collection, getDocs, getFirestore } from 'firebase/firestore';
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 
 export default function ItemListContainer() {
   const [products, setProducts] = useState([]);
+  const { idCategory } = useParams();
+
   useEffect(() => {
     const db = getFirestore();
-    const myCollection = collection(db, 'products');
-
+    let myCollection;
+    // SI ESTOY EN HOME O RUTA SIN PARAMS DE CATEGORIA DEFNIDOS
+    if (!idCategory == undefined) {
+      myCollection = collection(db, 'products');
+    } else {
+      myCollection = query(collection(db, 'products'), where('idCategory', '==', idCategory));
+    }
     getDocs(myCollection).then((data) => {
       const auxProducts = data.docs.map((product) => ({
         ...product.data(),
         id: product.id,
       }));
+
       setProducts(auxProducts);
     });
-  }, []);
+  }, [idCategory]);
 
   // const { idcategory } = useParams();
   // const [productos, setProductos] = useState([]);

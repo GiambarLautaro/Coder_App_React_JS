@@ -23,7 +23,7 @@ export default function Item({ product }) {
           <ListGroup.Item className="card-item">{product.price}</ListGroup.Item>
         </ListGroup>
         <Card.Body>
-          <Link to={`/item/${product.id}`}>
+          <Link to={'/item/' + product.id}>
             <Button variant="danger" className="button">
               {' '}
               Ver más <AiOutlineEye />
