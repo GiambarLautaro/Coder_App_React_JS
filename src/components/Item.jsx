@@ -20,7 +20,7 @@ export default function Item({ product }) {
         <ListGroup className="list-group-flush">
           <ListGroup.Item className="card-item">{product.color}</ListGroup.Item>
           <ListGroup.Item className="card-item">{product.talle}</ListGroup.Item>
-          <ListGroup.Item className="card-item">{product.price}</ListGroup.Item>
+          <ListGroup.Item className="card-item">${product.price}</ListGroup.Item>
         </ListGroup>
         <Card.Body>
           <Link to={'/item/' + product.id}>

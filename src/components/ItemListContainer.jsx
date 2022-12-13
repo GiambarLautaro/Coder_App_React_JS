@@ -13,7 +13,7 @@ export default function ItemListContainer() {
   useEffect(() => {
     const db = getFirestore();
     let myCollection;
-    // SI ESTOY EN HOME O RUTA SIN PARAMS DE CATEGORIA DEFNIDOS
+
     if (!idCategory == undefined) {
       myCollection = collection(db, 'products');
     } else {

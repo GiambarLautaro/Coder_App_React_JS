@@ -6,19 +6,19 @@ import '../styles/Item.css';
 import '../styles/ItemDetail.css';
 import ItemCount from './ItemCount';
 
-export default function ItemDetail({ productos }) {
+export default function ItemDetail({ product }) {
   return (
     <div className="detail-container">
       <Card className="card" style={{ width: '28rem' }}>
-        <Card.Img className="card-image" variant="top" src={productos.Data_imagen} />
+        <Card.Img className="card-image" variant="top" src={product.img} />
         <Card.Body>
-          <Card.Title>{productos.Data_nombre}</Card.Title>
-          <Card.Text>{productos.Data_descripcion}</Card.Text>
+          <Card.Title>{product.name}</Card.Title>
+          <Card.Text>{product.description}</Card.Text>
         </Card.Body>
         <ListGroup className="list-group-flush">
-          <ListGroup.Item className="card-item">{productos.Data_color}</ListGroup.Item>
-          <ListGroup.Item className="card-item">{productos.Data_talle}</ListGroup.Item>
-          <ListGroup.Item className="card-item">{productos.Data_precio}</ListGroup.Item>
+          <ListGroup.Item className="card-item">{product.color}</ListGroup.Item>
+          <ListGroup.Item className="card-item">{product.talle}</ListGroup.Item>
+          <ListGroup.Item className="card-item">${product.price}</ListGroup.Item>
         </ListGroup>
         <Card.Body>
           <ItemCount />
