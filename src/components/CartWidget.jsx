@@ -7,7 +7,7 @@ import { useContext } from 'react';
 import { cartContext } from './CartContextComponent';
 
 function Carrito() {
-  const { cart, totalCount } = useContext(cartContext);
+  const { totalCount } = useContext(cartContext);
 
   return (
     <>

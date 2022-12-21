@@ -1,24 +1,24 @@
 import React from 'react';
 import '../styles/Cart.css';
+import { cartContext } from './CartContextComponent';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Cart() {
+  const { totalCount, cart, totalPay, deleteFromCart } = useContext(cartContext);
   return (
-    <div style={{ backgroundColor: 'red' }}>
-      <div>
-        <h1>ACÁ VA EL CARRITO CON LOS PRODUCTOS SELECCIONADOS</h1>
-        <ul>
-          <li>PRODUCTO 1</li>
-          <li>PRODUCTO 2</li>
-          <li>PRODUCTO 3</li>
-        </ul>
+    <>
+      {cart.map((item) => (
+        <div key={item.id}>
+          {item.name + ' ' + item.count} <span onClick={() => deleteFromCart(item.id)}>🗑️</span>
+        </div>
+      ))}
+      <div style={{ backgroundColor: 'red' }}>
+        tienes en el carro: {totalCount} a pagar:{totalPay}
       </div>
-      <div>
-        {' '}
-        <Link to={'/checkout'}>
-          <button>BOTON DE PROCEDER CON EL PAGO QUE AL APRETARLO TE REDIRIGE A LA CHECKOUT PAGE</button>
-        </Link>
-      </div>
-    </div>
+      <Link to="/checkout">
+        <button>Proceder con el pago</button>
+      </Link>
+    </>
   );
 }

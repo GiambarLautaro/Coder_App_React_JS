@@ -27,6 +27,10 @@ export default function CartContextComponent({ children }) {
     setCart(cartAux);
   }
 
+  function deleteFromCart(id) {
+    setCart(cart.filter((item) => item.id !== id));
+  }
+
   useEffect(
     () => {
       setTotalCount(cart.reduce((acc, item) => acc + item.count, 0));
@@ -35,5 +39,5 @@ export default function CartContextComponent({ children }) {
     { cart }
   );
 
-  return <cartContext.Provider value={{ cart, addToCart, totalCount, totalToPay }}>{children}</cartContext.Provider>;
+  return <cartContext.Provider value={{ cart, addToCart, totalCount, totalToPay, deleteFromCart }}>{children}</cartContext.Provider>;
 }
