@@ -40,17 +40,17 @@ export default function ItemCount({ product }) {
       ) : (
         <Button onClick={onAdd} className="button" variant="danger" size="lg">
           Añadir al carrito <FaShoppingCart /> <br />
-          <Button onClick={res} variant="danger">
-            -
-          </Button>
-          <Button className="button-child" variant="white">
-            {count}
-          </Button>
-          <Button onClick={sum} variant="success">
-            +
-          </Button>
         </Button>
       )}
+      <Button onClick={res} variant="danger">
+        -
+      </Button>
+      <Button className="button-child" variant="white">
+        {count}
+      </Button>
+      <Button onClick={sum} variant="success">
+        +
+      </Button>
     </div>
   );
 }
