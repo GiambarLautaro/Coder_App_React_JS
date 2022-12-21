@@ -21,7 +21,7 @@ export default function ItemDetail({ product }) {
           <ListGroup.Item className="card-item">${product.price}</ListGroup.Item>
         </ListGroup>
         <Card.Body>
-          <ItemCount />
+          <ItemCount product={product} />
         </Card.Body>
       </Card>
     </div>
